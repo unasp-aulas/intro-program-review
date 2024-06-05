@@ -1,4 +1,4 @@
-# Revisão da avaliação
+# Revisão para avaliação
 
 ## Questão 1
 Escreva uma função `main` que calcule o aumento de um salário. Ele deve solicitar o valor do salário (`salario`) e o nível do cargo (`cargo`). Cargo `junior` terá um aumento de 15%, `pleno` de 26% e `senior` 34%. A função deve retornar o novo salário. Caso o cargo não corresponda a nenhum dos 3, deverá ser retornado o valor -1.
