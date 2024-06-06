@@ -1,13 +1,10 @@
-lista = [1, 5, 10, 20]
-
-def main(ultimo_valor):
-    
-    lista.append(ultimo_valor)
+def main(ultimo):
     soma = 0
-
-    for i in lista:  
-        soma = i + soma
+    
+    for i in range(ultimo+1):  
+        soma += i
        
     return soma
+
     
 print(main(1))

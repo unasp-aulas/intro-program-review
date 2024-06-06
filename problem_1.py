@@ -2,7 +2,6 @@ def main(cargo,salario):
     
     if cargo == "junior":
        salario = 1.15 * salario
-
        return salario
     elif cargo == "pleno":
        salario = 1.26 * salario
