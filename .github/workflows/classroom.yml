@@ -13,15 +13,58 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Pytest
-      id: pytest
-      uses: classroom-resources/autograding-python-grader@v1
+    - name: Question 1
+      id: question-1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
-        timeout: 10
+        test-name: Question 1
         setup-command: pip install pytest
+        command: pytest test_problem_1.py
+        timeout: 10
+        max-score: 2
+    - name: Question 2
+      id: question-2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Question 2
+        setup-command: pip install pytest
+        command: pytest test_problem_2.py
+        timeout: 10
+        max-score: 2
+    - name: Question 3
+      id: question-3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Question 3
+        setup-command: pip install pytest
+        command: pytest test_problem_3.py
+        timeout: 10
+        max-score: 2
+    - name: Question 4
+      id: question-4
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Question 4
+        setup-command: pip install pytest
+        command: pytest test_problem_4.py
+        timeout: 10
+        max-score: 2
+    - name: Question 5
+      id: question-5
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Question 5
+        setup-command: pip install pytest
+        command: pytest test_problem_5.py
+        timeout: 10
+        max-score: 2
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        PYTEST_RESULTS: "${{steps.pytest.outputs.result}}"
+        QUESTION-1_RESULTS: "${{steps.question-1.outputs.result}}"
+        QUESTION-2_RESULTS: "${{steps.question-2.outputs.result}}"
+        QUESTION-3_RESULTS: "${{steps.question-3.outputs.result}}"
+        QUESTION-4_RESULTS: "${{steps.question-4.outputs.result}}"
+        QUESTION-5_RESULTS: "${{steps.question-5.outputs.result}}"
       with:
-        runners: pytest
+        runners: question-1,question-2,question-3,question-4,question-5
