@@ -10,6 +10,6 @@ anos_pagar = int(input("Pagar em quantos anos? "))  # Não alterar
 prestacao = valor_casa/(12*anos_pagar)
 
 if prestacao > salario * 0.3:
-    print("Empréstimo não pode ser concedido")
+    print("Reprovado")
 else:
-    print(f"Valor da prestação: R$ {prestacao}")
+    print("Aprovado")

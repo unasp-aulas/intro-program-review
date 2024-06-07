@@ -6,6 +6,7 @@ soma = 0
 
 while True:
       numero = int(input("Digite um número: "))
-      if numero == 0:
-            break
       soma = soma + numero
+      if numero == 0:
+            print(soma)
+            break
