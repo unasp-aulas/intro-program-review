@@ -5,9 +5,9 @@ from problem_1 import main
 @pytest.mark.parametrize(
     "cargo,salario,expected",
     [
-        ("junior", 1000, 1100.0),
-        ("pleno", 1000, 1200.0),
-        ("senior", 1000, 1300.0),
+        ("junior", 1000, 1150.0),
+        ("pleno", 1000, 1260.0),
+        ("senior", 1000, 1340.0),
         ("outro", 1000, -1),
     ],
 )
